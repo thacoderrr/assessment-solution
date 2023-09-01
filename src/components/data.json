@@ -1,0 +1,63 @@
+[
+    {
+      "product": "insurance",
+      "amount_paid": "$6037.06",
+      "date_of_payment": "08-06-2023",
+      "id": 1
+    },
+    {
+      "product": "investment",
+      "amount_paid": "$1305.52",
+      "date_of_payment": "11-06-2023",
+      "id": 2
+    },
+    {
+      "product": "investment",
+      "amount_paid": "$5993.41",
+      "date_of_payment": "15-11-2022",
+      "id": 3
+    },
+    {
+      "product": "loan",
+      "amount_paid": "$4082.41",
+      "date_of_payment": "10-09-2022",
+      "id": 4
+    },
+    {
+      "product": "loan",
+      "amount_paid": "$1014.40",
+      "date_of_payment": "27-07-2023",
+      "id": 5
+    },
+    {
+      "product": "investment",
+      "amount_paid": "$2612.37",
+      "date_of_payment": "08-04-2023",
+      "id": 6
+    },
+    {
+      "product": "loan",
+      "amount_paid": "$5047.37",
+      "date_of_payment": "23-10-2022",
+      "id": 7
+    },
+    {
+      "product": "insurance",
+      "amount_paid": "$1706.17",
+      "date_of_payment": "01-11-2022",
+      "id": 8
+    },
+    {
+      "product": "investment",
+      "amount_paid": "$7453.86",
+      "date_of_payment": "02-06-2023",
+      "id": 9
+    },
+    {
+      "product": "insurance",
+      "amount_paid": "$2114.11",
+      "date_of_payment": "26-05-2023",
+      "id": 10
+    }
+  ]
+  
