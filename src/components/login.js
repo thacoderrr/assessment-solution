@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Form = styled.div`
     form { display: flex;
@@ -48,10 +48,6 @@ const Form = styled.div`
 `;
 
 function Mylogin() {
-
-    // const [username, setUsername] = useState("");
-    // const[password, setPassword] = useState("");
-
     const [data, setData] = useState({
         username: "",
         password: "",
@@ -73,6 +69,7 @@ function Mylogin() {
             password: "",
         })
     }
+
     const regExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
 
     const handleValidation =(e) => {
@@ -99,7 +96,7 @@ function Mylogin() {
     }
 
     return(
-        <div>
+        <div>            
             <Form>            
             <h1>Provide your login details</h1>
             <form onSubmit={handleSubmit}>
@@ -118,17 +115,16 @@ function Mylogin() {
                     name="password"
                     id="password"
                     value={data.password}
-                    required={true}
+                    // required={true}
                     onChange={handleChange}
                     onKeyUp={handleValidation}
                     />
-
                 <p>{message}</p>                
                 <button type="submit" onClick={handleLogin}>Login</button>                
             </form>
         </Form>
         </div>
-        )
+    )
 };
 
 export default Mylogin;

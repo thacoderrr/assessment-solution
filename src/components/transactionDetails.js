@@ -49,17 +49,16 @@ useEffect(() => {
 }, []);
 
     return(
-        <div>
-            <nav>
+            <div>
+                <nav>
                 <Link to="/dashboard">My Dashboard</Link>
                 <Link to="/transactiondetails">Transaction Details</Link>
-            </nav>
+                </nav>
 
             <Style>
             <h1>Payment Transactions</h1>
             <div>
-                {
-                customer.map(list => (
+                {customer.map(list => (
                     <div>
                         <ul key={list.id}>
                         <li>Name: {list.name}</li>
@@ -67,13 +66,12 @@ useEffect(() => {
                         <li>Product: {list.product}</li>
                         <li>Amount Paid: {list.amountpaid}</li>
                         <li>Date of Payment: {list.date}</li>
-                        </ul>                        
+                        </ul>
                     </div>                    
                 ))}
             </div>
-            </Style>
-        </div>        
+            </Style>        
+            </div>            
     )
 }
-
 export default Transactiondetails;

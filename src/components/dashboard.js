@@ -32,10 +32,8 @@ function Mydashboard() {
             <li>Amount paid: #5,000</li>
             <li>Date of Payment: 31/08/2023</li>
         </div>
-        </Details>
-        
+            </Details>   
         </div>
     )
 };
-
 export default Mydashboard;
