@@ -55,7 +55,10 @@ function Mylogin() {
     const [data, setData] = useState({
         username: "",
         password: "",
-    })
+    });
+    const [message, setMessage] = useState("");
+    const navigate = useNavigate();
+
     const handleChange =(e) => {
         setData({
             ...data, 
@@ -70,11 +73,34 @@ function Mylogin() {
             password: "",
         })
     }
+    const regExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+
+    const handleValidation =(e) => {
+        
+        if(data.password === "") {
+            setMessage("Please enter password")
+        } else if (regExp.test(data.password)) {
+            setMessage("Password is valid")
+        } else if (!regExp.test(data.password)) {
+            setMessage("Password is not valid")
+        }
+        else {
+            setMessage("")
+        }
+    }
+
+    const handleLogin = (e) => {
+        //if password is invalid, do not login else login.
+        if(regExp.test(data.password)) {
+            navigate("./dashboard")
+        } else {
+            alert("Invalid password")
+        }
+    }
 
     return(
         <div>
-            <Form>
-            
+            <Form>            
             <h1>Provide your login details</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">User Name</label>
@@ -94,14 +120,12 @@ function Mylogin() {
                     value={data.password}
                     required={true}
                     onChange={handleChange}
+                    onKeyUp={handleValidation}
                     />
 
-                <Link to="/dashboard">
-                <button type="submit">Login</button>
-                </Link>
-                
+                <p>{message}</p>                
+                <button type="submit" onClick={handleLogin}>Login</button>                
             </form>
-
         </Form>
         </div>
         )

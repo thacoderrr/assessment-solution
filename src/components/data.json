@@ -7,5 +7,5 @@
 
     {"id": 4, "name": "John", "telephonenumber": "08000000", "product": "Online payment", "amountpaid": 4000,"date": "28/08/23"},
 
-    {"id": 5, "name": "John", "telephonenumber": "08000000", "product": "credit card", "amountaid": 15000,"date": "27/08/23"}
+    {"id": 5, "name": "John", "telephonenumber": "08000000", "product": "credit card", "amountpaid": 15000,"date": "27/08/23"}
 ]

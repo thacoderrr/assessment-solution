@@ -3,6 +3,7 @@ import { createServer } from "miragejs";
 import data from "./data.json"
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Style = styled.div`
 h1 {
@@ -48,7 +49,12 @@ useEffect(() => {
 }, []);
 
     return(
-       
+        <div>
+            <nav>
+                <Link to="/dashboard">My Dashboard</Link>
+                <Link to="/transactiondetails">Transaction Details</Link>
+            </nav>
+
             <Style>
             <h1>Payment Transactions</h1>
             <div>
@@ -61,15 +67,12 @@ useEffect(() => {
                         <li>Product: {list.product}</li>
                         <li>Amount Paid: {list.amountpaid}</li>
                         <li>Date of Payment: {list.date}</li>
-                        </ul>
-                        
-                    </div>
-                    
-                ))
-                }
+                        </ul>                        
+                    </div>                    
+                ))}
             </div>
             </Style>
-        
+        </div>        
     )
 }
 

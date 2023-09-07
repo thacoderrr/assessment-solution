@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Details = styled.div`
 h1 {
@@ -16,7 +17,12 @@ li{
 function Mydashboard() {
     return(
         <div>
-            <Details>
+            <nav>
+            <Link to="/dashboard">My Dashboard</Link>
+            <Link to="/transactiondetails">Transaction Details</Link>
+            </nav>
+
+        <Details>
             <h1>Dashboard</h1>
         {/* summarized details of financial investments */}
         <div>
@@ -26,9 +32,8 @@ function Mydashboard() {
             <li>Amount paid: #5,000</li>
             <li>Date of Payment: 31/08/2023</li>
         </div>
-            </Details>
+        </Details>
         
-
         </div>
     )
 };
