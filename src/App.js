@@ -8,12 +8,7 @@ import Transactiondetails from './components/transactionDetails';
 function App() {
   return (
     <div>
-      {/* <Mylogin /> */}
-      {/* <nav>
-          <Link to="/">Login</Link>
-          <Link to="/dashboard">My Dashboard</Link>
-          <Link to="/transactiondetails">Transaction Details</Link>
-        </nav>  */}        
+      {/* <Mylogin /> */}       
         <Routes> 
             <Route exact path="/" element={<Mylogin/>} />           
             <Route path="/dashboard" element={<Mydashboard/>} />
