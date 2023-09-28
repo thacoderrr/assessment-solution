@@ -1,0 +1,15 @@
+body {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+ul {
+  list-style: none;
+}
